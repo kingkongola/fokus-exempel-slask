@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fokus-demo - Yrkesväljaren 1.2.4</title>
+    <link rel="stylesheet"
+        href="./node_modules/@designsystem-se/af/dist/digi-arbetsformedlingen/digi-arbetsformedlingen.css">
+    <style>
+        body {
+            font-family: system-ui;
+            padding: 2rem;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .error {
+            background: #f8d7da;
+            border: 2px solid #dc3545;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .error a {
+            color: #721c24;
+            font-weight: bold;
+        }
+
+        .spacer {
+            height: 80vh;
+            background: #f1f3f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            color: #868e96;
+        }
+
+        button {
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            background: #1971c2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🧪 Fokustest - Yrkesväljaren 1.2.4</h1>
+
+    <div class="error">
+        <p>⚠️ <a href="#my-yrkesvaljaren">Välj yrke är obligatoriskt</a></p>
+    </div>
+
+    <button onclick="document.getElementById('my-yrkesvaljaren').focus()">
+        Fokusera via JavaScript
+    </button>
+
+    <div class="spacer">↓ Komponenten är längre ner ↓</div>
+
+    <yrkes-valjaren id="my-yrkesvaljaren" taxonomy-url="https://d3hng02m5bee8m.cloudfront.net/latest.json"
+        yv-label="Välj yrke">
+    </yrkes-valjaren>
+
+    <p><strong>Förväntat:</strong> Klicka länk/knapp → fokus i input-fältet</p>
+
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>

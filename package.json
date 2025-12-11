@@ -1,0 +1,11 @@
+{
+    "name": "focus-demo",
+    "private": true,
+    "scripts": {
+        "dev": "npx vite"
+    },
+    "dependencies": {
+        "@taxonomy/yrkesvaljaren": "^1.2.4",
+        "@designsystem-se/af": "^34.0.0"
+    }
+}
